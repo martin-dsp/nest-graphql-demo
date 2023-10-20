@@ -6,7 +6,7 @@ import { Owner } from '../owners/entities/owner.entity';
 @Entity()
 export class Pet {
   @PrimaryGeneratedColumn()
-  @Field((type) => Int)
+  @Field(() => Int)
   id: number;
 
   @Column()
@@ -18,10 +18,10 @@ export class Pet {
   type?: string;
 
   @Column()
-  @Field((type) => Int)
+  @Field(() => Int)
   ownerId: number;
 
   @ManyToOne(() => Owner, (owner) => owner.pets)
-  @Field((type) => Owner)
+  @Field(() => Owner)
   owner: Owner;
 }

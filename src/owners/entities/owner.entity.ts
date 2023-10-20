@@ -6,7 +6,7 @@ import { Pet } from '../../pets/pet.entity';
 @ObjectType()
 export class Owner {
   @PrimaryGeneratedColumn()
-  @Field((type) => Int)
+  @Field(() => Int)
   id: number;
 
   @Column()
@@ -14,6 +14,6 @@ export class Owner {
   name: string;
 
   @OneToMany(() => Pet, (pet) => pet.owner)
-  @Field((type) => [Pet], { nullable: true })
+  @Field(() => [Pet], { nullable: true })
   pets?: Pet[];
 }

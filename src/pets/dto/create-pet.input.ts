@@ -10,6 +10,6 @@ export class CreatePetInput {
   @Field({ nullable: true })
   type?: string;
 
-  @Field((type) => Int)
+  @Field(() => Int)
   ownerId: number;
 }

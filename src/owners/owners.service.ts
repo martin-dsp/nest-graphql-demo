@@ -26,7 +26,7 @@ export class OwnersService {
   }
 
   update(id: number, updateOwnerInput: UpdateOwnerInput) {
-    return `This action updates a #${id} owner`;
+    return `This action updates a #${id} ${updateOwnerInput} owner`;
   }
 
   remove(id: number) {
